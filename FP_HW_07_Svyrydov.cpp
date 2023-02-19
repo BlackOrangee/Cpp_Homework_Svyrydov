@@ -220,19 +220,19 @@ int main()		// Task 4.
 
 	cout << "\n\n\tMultiplication table test\n\n\t";
 
-	srand(time(NULL));
-	num_1 = rand() % 9 + 1;
-	num_2 = rand() % 9 + 1;
+	srand(time(NULL));	// Randomizer 
+	num_1 = rand() % 9 + 1;	// First number from 1 to 9
+	num_2 = rand() % 9 + 1; // Second number from 1 to 9
 
-	cout << num_1 << " x " << num_2 << " = "; cin >> answer;
+	cout << num_1 << " x " << num_2 << " = "; cin >> answer; // Test 
 
-	correct_answer = num_1 * num_2;
+	correct_answer = num_1 * num_2; // Examination 
 
-	if (correct_answer == answer) {
+	if (correct_answer == answer) {	// if answer correct 
 
 		cout << "\n\n\tRight!\n\n\n";
 	}
-	else
+	else // if answer incorrect 
 	{
 		cout << "\n\n\tWrong\n\n\t";
 		cout << num_1 << " x " << num_2 << " = " << correct_answer;
