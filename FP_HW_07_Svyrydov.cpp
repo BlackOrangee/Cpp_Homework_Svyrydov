@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()		// Task 1. The user enters a character from the keyboard.
@@ -314,6 +314,63 @@ int main()		// Task 4.
 
 
 
+#include <iostream>
+using namespace std;
+				// Classwork task
+int main()		// To calculate travel time, the user needs to enter letters (A, B, C, D, E) instead of station numbers.
+				// It is necessary to provide for user input of both small and capital letters (get rid of case sensitivity).
+				// That is, if either D or d- is entered, the same case should work.
+{
+	char in_letter;
 
+	cout << "\n\n\tEnter the basic station\n\n\t(A, B, C, D, E)\n\n\t"; cin >> in_letter;
+	/*
+		65 : A	97 : a
+		66 : B	98 : b
+		67 : C	99 : c
+		68 : D	100 : d
+		69 : E	101 : e		
+	*/
+	if (((in_letter >= 65) && (in_letter <= 69)) || ((in_letter >= 97) && (in_letter <= 101)))
+	{
+		int menu, time =0, a = 10, b = 8, c = 16, d = 20, e = 5;
 
+		if ((in_letter == 65) || (in_letter == 97)) {
+			menu = 1;
+		}
+		else if ((in_letter == 66) || (in_letter == 98)) {
+			menu = 2;
+		}
+		else if ((in_letter == 67) || (in_letter == 99)) {
+			menu = 3;
+		}
+		else if ((in_letter == 68) || (in_letter == 100)) {
+			menu = 4;
+		}
+		else if ((in_letter == 69) || (in_letter == 101)) {
+			menu = 5;
+		}
 
+		switch (menu)
+		{
+		case 1:
+			time += a;
+		case 2:
+			time += b;
+		case 3:
+			time += c;
+		case 4:
+			time += d;
+		case 5:
+			time += e;
+			cout << "\n\n\tTime in travel: " << time << " minutes\n\n\n";
+		default:
+			break;
+		}
+
+	}
+	else
+	{
+		cout << "\n\tInvalid letter\n\n\n";
+	}
+}
